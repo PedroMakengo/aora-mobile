@@ -10,6 +10,7 @@ import IconButton from './components/IconButton'
 import CircleButton from './components/CircleButton'
 import EmojiPicker from './components/EmojiPicker'
 import EmojiList from './components/EmojiList'
+import EmojiSticker from './components/EmojiSticker'
 
 export default function App() {
   const PlaceholderImage = require('./assets/images/background-image.png')
@@ -55,6 +56,9 @@ export default function App() {
           placeholderImageSource={PlaceholderImage}
           selectedImage={selectedImage}
         />
+        {pickedEmoji && (
+          <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />
+        )}
       </View>
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
