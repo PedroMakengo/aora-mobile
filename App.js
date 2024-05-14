@@ -52,7 +52,7 @@ export default function App() {
             <CircleButton onPress={onAddSticker} />
             <IconButton
               icon="save-alt"
-              label="Reset"
+              label="Save"
               onPress={onSaveImageAsync}
             />
           </View>
